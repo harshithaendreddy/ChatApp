@@ -1,0 +1,17 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Chat Display";
+}
+
+<h2>Chat Messages</h2>
+
+<div style="border: 1px solid gray; padding: 10px; max-height: 300px; overflow-y: auto;">
+    @foreach (var msg in Model)
+    {
+        <p>@msg</p>
+    }
+</div>
+
+<br />
+<a asp-action="Chat">Back to Chat</a>

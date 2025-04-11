@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Chat Page";
+}
+
+<h2>Welcome, @ViewBag.UserName!</h2>
+
+<form method="post" asp-action="SendMessage">
+    <input type="text" name="message" placeholder="Type your message..." required />
+    <button type="submit">Send</button>
+</form>
+
+<br />
+<a asp-action="Display">View Chat</a>
